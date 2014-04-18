@@ -7,5 +7,11 @@ nginx_http_params:
   keepalive_timeout: "65"
   access_log: "/var/log/nginx/{{project_name}}_access.log"
   error_log: "/var/log/nginx/{{project_name}}_error.log"
+  types_hash_max_size: 2048
 nginx_sites:
-
+  - server:
+      file_name: "{{ project_name }}"
+      listen: 80
+      server_name: incase.io
+      root: "/home/{{ project_name }}/www/build"
+      location1: {name: /, try_files: "$uri $uri/ /index.html"}

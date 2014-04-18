@@ -1,6 +1,6 @@
 ---
 users:
-  - username: {{ project_name }}
+  - username: "{{ project_name }}"
     name: Incase base user
     uid: 1001
     groups: []
