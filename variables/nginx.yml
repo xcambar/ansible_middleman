@@ -1,0 +1,11 @@
+---
+nginx_max_clients: 512
+nginx_http_params:                                    
+  sendfile: "on"                                      
+  tcp_nopush: "on"
+  tcp_nodelay: "on"
+  keepalive_timeout: "65"
+  access_log: "/var/log/nginx/{{project_name}}_access.log"
+  error_log: "/var/log/nginx/{{project_name}}_error.log"
+nginx_sites:
+

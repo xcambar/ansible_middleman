@@ -1,0 +1,9 @@
+[submodule "roles/users"]
+	path = roles/users
+	url = git@github.com:mivok/ansible-users.git
+[submodule "roles/rbenv"]
+	path = roles/rbenv
+	url = git@github.com:zzet/ansible-rbenv-role.git
+[submodule "roles/nginx"]
+	path = roles/nginx
+	url = git@github.com:bennojoy/nginx.git
