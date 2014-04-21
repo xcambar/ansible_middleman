@@ -1,0 +1,20 @@
+#FIXME: This whole role is messed up
+---
+#TODO This is not the correct location for this task
+- name: Configure rbenv in non-interactive shells
+  lineinfile: dest=/etc/bash.bashrc
+              line="source /etc/profile.d/rbenv.sh"
+              regexp='profile.d/rbenv.sh'
+              state=present
+              insertbefore=BOF
+  remote_user: root
+- name: Copy private key to user
+  copy: src=keys/deploy dest=/home/{{project_name}}/.ssh/deploy
+  remote_user: "{{project_name}}"
+- name: Adds to SSH config
+  lineinfile: dest=/home/{{project_name}}/.ssh/config
+              regexp={{project_name}}
+              state=present
+              line="IdentityFile /home/{{project_name}}/.ssh/deploy"
+              create=true
+  remote_user: "{{project_name}}"

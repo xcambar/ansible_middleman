@@ -1,0 +1,7 @@
+---
+- hosts: website
+  vars:
+    project_name: incase
+    repo: "git@bitbucket.org:xcambar/incase.www.git"
+  roles:
+    - deployer
