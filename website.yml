@@ -1,10 +1,9 @@
 ---
 - hosts: website
   vars:
-    project_name: incase
     ubuntu_release: lucid
-    repo: "git@bitbucket.org:xcambar/incase.www.git"
   vars_files:
+    - variables/project.yml
     - variables/users.yml
     - variables/rbenv.yml
     - variables/nginx.yml
