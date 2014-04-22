@@ -4,6 +4,7 @@
 - name: Pulls the latest version
   git:  dest=/home/{{project_name}}/www
         repo={{ repo }}
+        accept_hostkey=true
   remote_user: "{{project_name}}"
 - name: Build project
   shell: "cd /home/{{project_name}}/www && bundle install && bundle exec middleman build"

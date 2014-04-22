@@ -12,6 +12,6 @@ nginx_sites:
   - server:
       file_name: "{{ project_name }}"
       listen: 80
-      server_name: incase.io
+      server_name: "{{ domain }}"
       root: "/home/{{ project_name }}/www/build"
       location1: {name: /, try_files: "$uri $uri/ /index.html"}

@@ -1,9 +1,9 @@
 ---
 users:
   - username: "{{ project_name }}"
-    name: Incase base user
+    name: Base user
     uid: 1001
     groups: []
     ssh_key:
-      - "{{ lookup('file', 'keys/incase_access.pub') }}"
+      - "{{ lookup('file', 'keys/access.pub') }}"
     
