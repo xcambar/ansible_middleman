@@ -1,6 +1,6 @@
 # Middleman Ansible
 
-A (pretty successful) experiment to learn [Ansible](http://ansible.co)
+A (pretty successful) experiment to learn [Ansible](http://ansible.com)
 with a simple example: A static website with [Middleman](http://middlemanapp.com).
 
 ## Requirements
@@ -9,9 +9,10 @@ with a simple example: A static website with [Middleman](http://middlemanapp.com
 
 ## Setup
 
-1. Copy your public SSH key to keys/access.pub
-1. Copy the private deploy key to kkeys/deploy
+1. Copy your public SSH key to `keys/access.pub`
+1. Copy the private deploy key to `keys/deploy`
 1. Populate the `website` section of the `hosts` file
+1. Rename `variables/project.yml` to `variables/project.yml`
 1. Update `variables/project.yml` as per your project's settings
 
 ## Playbooks
